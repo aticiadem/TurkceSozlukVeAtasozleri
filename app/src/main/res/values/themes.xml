@@ -2,8 +2,8 @@
     <!-- Base application theme. -->
     <style name="Theme.TurkceSozlukVeAtasozleri" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/red</item>
-        <item name="colorPrimaryVariant">@color/red</item>
+        <item name="colorPrimary">@color/redVisne</item>
+        <item name="colorPrimaryVariant">@color/redVisne</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>
