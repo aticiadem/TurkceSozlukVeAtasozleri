@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">Türkçe Sözlük</string>
     <string name="splashscreen_text">Türkçe Sözlük Ve Atasözleri</string>
+    <string name="navbar_gecmis">Geçmiş</string>
+    <string name="navbar_arama">Arama</string>
+    <string name="navbar_kaydedilenler">Kaydedilenler</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

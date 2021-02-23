@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/action_gecmis"
+        android:title="@string/navbar_gecmis"
+        android:icon="@drawable/ic_history"/>
+
+    <item android:id="@+id/action_arama"
+        android:title="@string/navbar_arama"
+        android:icon="@drawable/ic_search"/>
+
+    <item android:id="@+id/action_kaydedilenler"
+        android:title="@string/navbar_kaydedilenler"
+        android:icon="@drawable/ic_bookmark"/>
+
+</menu>
