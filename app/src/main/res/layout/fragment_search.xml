@@ -1,14 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
     tools:context=".ui.fragment.SearchFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+    <EditText
+        android:id="@+id/editTextArama"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@drawable/edit_text_ara_background"
+        android:singleLine="true"
+        android:hint="@string/aramak_stedi_iniz_kelimeyi_giriniz"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:padding="10dp"/>
 
-</FrameLayout>
+    <Button
+        android:id="@+id/buttonAra"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ara_button_background"
+        android:text="@string/ara"
+        android:layout_marginTop="30dp"
+        android:textSize="24sp" />
+
+</LinearLayout>
