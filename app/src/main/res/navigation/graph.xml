@@ -22,10 +22,22 @@
         <action
             android:id="@+id/action_searchFragment_to_savedFragment"
             app:destination="@id/savedFragment" />
+        <action
+            android:id="@+id/action_searchFragment_to_resultFragment"
+            app:destination="@id/resultFragment" />
     </fragment>
     <fragment
         android:id="@+id/savedFragment"
         android:name="com.adematici.turkcesozlukveatasozleri.ui.fragment.SavedFragment"
         android:label="Kaydedilenler"
         tools:layout="@layout/fragment_saved" />
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.adematici.turkcesozlukveatasozleri.ui.fragment.ResultFragment"
+        android:label="Sonuç"
+        tools:layout="@layout/fragment_result" >
+        <argument
+            android:name="kelime"
+            app:argType="string" />
+    </fragment>
 </navigation>
