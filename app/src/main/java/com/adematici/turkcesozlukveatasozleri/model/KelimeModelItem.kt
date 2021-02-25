@@ -4,6 +4,6 @@ import com.google.gson.annotations.SerializedName
 
 data class KelimeModelItem(
     val anlamlarListe: List<AnlamlarListe>,
-    val atasozu: List<Atasozu>,
+    val atasozu: List<Atasozu>?,
     val madde: String
 )

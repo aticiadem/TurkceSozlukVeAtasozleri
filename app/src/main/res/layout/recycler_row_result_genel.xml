@@ -11,7 +11,6 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="adem"
         android:textSize="24sp"
         android:textColor="@color/red"
         app:layout_constraintStart_toStartOf="parent"
@@ -29,13 +28,14 @@
         app:layout_constraintTop_toBottomOf="@+id/textViewKelime" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/textViewAtasozleri"
+        android:id="@+id/recyclerViewAtasozleri"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="2dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="4dp"
         android:layout_marginEnd="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/recyclerViewAnlamlar"
         app:layout_constraintTop_toBottomOf="@+id/recyclerViewAnlamlar" />
 
