@@ -4,15 +4,17 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.adematici.turkcesozlukveatasozleri.databinding.RecyclerRowResultGenelBinding
+import com.adematici.turkcesozlukveatasozleri.model.AnlamlarListe
 import com.adematici.turkcesozlukveatasozleri.model.KelimeModel
 
-class ResultRecyclerAdapter(private val kelimeModel: KelimeModel,private val mContext: Context): RecyclerView.Adapter<ResultRecyclerAdapter.ResultViewHolder>() {
+class ResultRecyclerAdapter(private val kelimeModel: KelimeModel,private val mContext: Context)
+    : RecyclerView.Adapter<ResultRecyclerAdapter.ResultViewHolder>() {
 
-    class ResultViewHolder(val itemBinding: RecyclerRowResultGenelBinding):
-            RecyclerView.ViewHolder(itemBinding.root){
-    }
+    class ResultViewHolder(val itemBinding: RecyclerRowResultGenelBinding)
+        : RecyclerView.ViewHolder(itemBinding.root)
 
     override fun getItemCount(): Int {
         return kelimeModel.size
@@ -25,7 +27,10 @@ class ResultRecyclerAdapter(private val kelimeModel: KelimeModel,private val mCo
 
     @SuppressLint("SetTextI18n")
     override fun onBindViewHolder(holder: ResultViewHolder, position: Int) {
+        var adapter = KelimeAnlamlariRecyclerAdapter(mContext, kelimeModel[position].anlamlarListe as ArrayList<AnlamlarListe>)
         holder.itemBinding.textViewKelime.text = "${position+1}- ${kelimeModel[position].madde}"
+        holder.itemBinding.recyclerViewAnlamlar.layoutManager = LinearLayoutManager(mContext)
+        holder.itemBinding.recyclerViewAnlamlar.adapter = adapter
     }
 
 }

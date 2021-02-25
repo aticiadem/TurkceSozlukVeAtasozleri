@@ -19,22 +19,22 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewAnlamlar"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="2dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/textViewKelime"
         app:layout_constraintTop_toBottomOf="@+id/textViewKelime" />
 
-    <TextView
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/textViewAtasozleri"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:layout_marginBottom="4dp"
-        android:text="Varsa Atasözleri"
-        android:textSize="18sp"
-        android:textColor="@android:color/holo_orange_dark"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@+id/recyclerViewAnlamlar"
         app:layout_constraintTop_toBottomOf="@+id/recyclerViewAnlamlar" />
