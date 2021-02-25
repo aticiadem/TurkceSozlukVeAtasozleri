@@ -3,6 +3,7 @@ package com.adematici.turkcesozlukveatasozleri.viewmodel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.adematici.turkcesozlukveatasozleri.model.KelimeModel
+import com.adematici.turkcesozlukveatasozleri.model.KelimeModelItem
 import com.adematici.turkcesozlukveatasozleri.service.SozlukAPIService
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
