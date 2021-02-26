@@ -7,6 +7,8 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.adematici.turkcesozlukveatasozleri.R
 import com.adematici.turkcesozlukveatasozleri.adapter.GecmisRecyclerAdapter
+import com.adematici.turkcesozlukveatasozleri.database.GecmisDao
+import com.adematici.turkcesozlukveatasozleri.database.VeritabaniYardimcisi
 import com.adematici.turkcesozlukveatasozleri.databinding.FragmentHistoryBinding
 import com.adematici.turkcesozlukveatasozleri.model.ArananKelimelerModel
 
@@ -14,7 +16,6 @@ class HistoryFragment : Fragment() {
 
     private lateinit var binding: FragmentHistoryBinding
     private lateinit var adapter: GecmisRecyclerAdapter
-    private lateinit var gecmisKelimeler: ArrayList<ArananKelimelerModel>
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -28,15 +29,9 @@ class HistoryFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         setHasOptionsMenu(true)
 
-        gecmisKelimeler = ArrayList()
-        val x = ArananKelimelerModel("Adem")
-        val y = ArananKelimelerModel("Badem")
-        gecmisKelimeler.add(x)
-        gecmisKelimeler.add(y)
-
-        binding.recyclerView.layoutManager = LinearLayoutManager(activity)
-        adapter = GecmisRecyclerAdapter(requireActivity(),gecmisKelimeler)
-        binding.recyclerView.adapter = adapter
+        //binding.recyclerView.layoutManager = LinearLayoutManager(activity)
+        //adapter = GecmisRecyclerAdapter(requireActivity(),gecmisKelimeler)
+        //binding.recyclerView.adapter = adapter
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {

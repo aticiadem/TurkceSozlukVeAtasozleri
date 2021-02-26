@@ -24,8 +24,5 @@ class GecmisRecyclerAdapter(private val context: Context,private val gecmisKelim
 
     override fun onBindViewHolder(holder: GecmisViewHolder, position: Int) {
         holder.itemBinding.textViewKelime.text = gecmisKelimeler[position].kelime
-        holder.itemBinding.imageViewDelete.setOnClickListener {
-            Toast.makeText(context,"Bastın",Toast.LENGTH_SHORT).show()
-        }
     }
 }

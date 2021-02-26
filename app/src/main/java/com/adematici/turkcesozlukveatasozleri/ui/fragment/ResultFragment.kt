@@ -12,6 +12,8 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.adematici.turkcesozlukveatasozleri.adapter.ResultRecyclerAdapter
+import com.adematici.turkcesozlukveatasozleri.database.GecmisDao
+import com.adematici.turkcesozlukveatasozleri.database.VeritabaniYardimcisi
 import com.adematici.turkcesozlukveatasozleri.databinding.FragmentResultBinding
 import com.adematici.turkcesozlukveatasozleri.model.AnlamlarListe
 import com.adematici.turkcesozlukveatasozleri.model.Atasozu
@@ -24,9 +26,9 @@ class ResultFragment : Fragment() {
     private lateinit var viewModel: ResultViewModel
     private lateinit var binding: FragmentResultBinding
     private var gelenKelime: String? = null
-    //private lateinit var kelimeModelListesi: ArrayList<KelimeModelItem>
-    //private lateinit var kelimeListesi: ArrayList<KelimeModel>
     private lateinit var adapter: ResultRecyclerAdapter
+
+
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         binding = FragmentResultBinding.inflate(layoutInflater,container,false)
@@ -56,20 +58,8 @@ class ResultFragment : Fragment() {
                 binding.progressBar.visibility = View.INVISIBLE
                 binding.recyclerView.visibility = View.VISIBLE
 
-                //kelimeModelListesi = ArrayList(it)
                 adapter = ResultRecyclerAdapter(it, requireActivity())
                 binding.recyclerView.adapter = adapter
-                /*for(i in 0..veriListesi.lastIndex){
-                    println(veriListesi[i].madde)
-                    for(j in 0..veriListesi[i].anlamlarListe.lastIndex){
-                        println(veriListesi[i].anlamlarListe[j].anlam)
-                    }
-                    atasozuListesi.let{
-                        println("******************************")
-                        println(atasozuListesi[i])
-                    }
-                    println("***************************")
-                }*/
             }
         })
         viewModel.errorMessage.observe(viewLifecycleOwner,Observer{ error ->

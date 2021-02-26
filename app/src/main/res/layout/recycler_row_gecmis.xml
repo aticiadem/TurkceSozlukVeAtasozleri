@@ -8,6 +8,7 @@
     android:background="@color/gray">
 
     <ImageView
+        android:id="@+id/imageView"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_margin="8dp"
@@ -48,6 +49,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <View
+        android:id="@+id/view"
         android:layout_width="0dp"
         android:layout_height="2dp"
         app:layout_constraintBottom_toBottomOf="parent"

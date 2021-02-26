@@ -7,6 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.navigation.Navigation
+import com.adematici.turkcesozlukveatasozleri.database.GecmisDao
+import com.adematici.turkcesozlukveatasozleri.database.VeritabaniYardimcisi
 import com.adematici.turkcesozlukveatasozleri.databinding.FragmentSearchBinding
 
 class SearchFragment : Fragment() {
@@ -24,7 +26,7 @@ class SearchFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        var kelime: String? = null
+        var kelime: String?
 
         binding.buttonAra.setOnClickListener {
             if(binding.editTextArama.text.isNotEmpty()){
