@@ -27,8 +27,7 @@ class ResultFragment : Fragment() {
     private lateinit var binding: FragmentResultBinding
     private var gelenKelime: String? = null
     private lateinit var adapter: ResultRecyclerAdapter
-
-
+    private lateinit var vt: VeritabaniYardimcisi
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         binding = FragmentResultBinding.inflate(layoutInflater,container,false)
@@ -41,6 +40,8 @@ class ResultFragment : Fragment() {
         arguments?.let {
             gelenKelime = ResultFragmentArgs.fromBundle(it).kelime
         }
+
+        vt = VeritabaniYardimcisi(requireContext())
 
         viewModel = ViewModelProviders.of(this).get(ResultViewModel::class.java)
         viewModel.verileriAl(gelenKelime!!)
@@ -58,6 +59,7 @@ class ResultFragment : Fragment() {
                 binding.progressBar.visibility = View.INVISIBLE
                 binding.recyclerView.visibility = View.VISIBLE
 
+                GecmisDao().kelimeEkle(vt, gelenKelime!!)
                 adapter = ResultRecyclerAdapter(it, requireActivity())
                 binding.recyclerView.adapter = adapter
             }

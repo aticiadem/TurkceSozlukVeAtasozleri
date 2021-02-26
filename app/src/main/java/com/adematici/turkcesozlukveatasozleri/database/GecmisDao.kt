@@ -34,4 +34,9 @@ class GecmisDao {
         db.close()
     }
 
+    fun tumKelimeleriSil(vt: VeritabaniYardimcisi){
+        val db = vt.writableDatabase
+        db.delete("gecmis",null, null)
+    }
+
 }

@@ -16,6 +16,8 @@ class HistoryFragment : Fragment() {
 
     private lateinit var binding: FragmentHistoryBinding
     private lateinit var adapter: GecmisRecyclerAdapter
+    private lateinit var vt: VeritabaniYardimcisi
+    private lateinit var gecmisKelimeler: ArrayList<ArananKelimelerModel>
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -29,9 +31,15 @@ class HistoryFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         setHasOptionsMenu(true)
 
-        //binding.recyclerView.layoutManager = LinearLayoutManager(activity)
-        //adapter = GecmisRecyclerAdapter(requireActivity(),gecmisKelimeler)
-        //binding.recyclerView.adapter = adapter
+        vt = VeritabaniYardimcisi(requireContext())
+        gecmisKelimeler = GecmisDao().tumKelimeler(vt)
+
+        val layoutManager = LinearLayoutManager(activity)
+        layoutManager.reverseLayout = true
+        layoutManager.stackFromEnd = true
+        binding.recyclerView.layoutManager = layoutManager
+        adapter = GecmisRecyclerAdapter(requireActivity(),gecmisKelimeler)
+        binding.recyclerView.adapter = adapter
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
@@ -42,7 +50,10 @@ class HistoryFragment : Fragment() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when(item.itemId){
             R.id.action_tumunu_sil -> {
-                Toast.makeText(activity,"Bastın",Toast.LENGTH_SHORT).show()
+                GecmisDao().tumKelimeleriSil(vt)
+                gecmisKelimeler = GecmisDao().tumKelimeler(vt)
+                adapter = GecmisRecyclerAdapter(requireActivity(),gecmisKelimeler)
+                binding.recyclerView.adapter = adapter
                 return true
             }
         }
