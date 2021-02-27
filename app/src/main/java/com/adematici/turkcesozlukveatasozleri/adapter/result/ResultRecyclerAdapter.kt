@@ -1,4 +1,4 @@
-package com.adematici.turkcesozlukveatasozleri.adapter
+package com.adematici.turkcesozlukveatasozleri.adapter.result
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.adematici.turkcesozlukveatasozleri.R
 import com.adematici.turkcesozlukveatasozleri.databinding.RecyclerRowResultGenelBinding
 import com.adematici.turkcesozlukveatasozleri.model.AnlamlarListe
 import com.adematici.turkcesozlukveatasozleri.model.Atasozu
@@ -30,7 +31,7 @@ class ResultRecyclerAdapter(private val kelimeModel: KelimeModel,private val mCo
         return ResultViewHolder(binding)
     }
 
-    @SuppressLint("SetTextI18n")
+    @SuppressLint("SetTextI18n", "ResourceAsColor")
     override fun onBindViewHolder(holder: ResultViewHolder, position: Int) {
         holder.itemBinding.textViewKelime.text = "${position+1}- ${kelimeModel[position].madde}"
 
@@ -43,7 +44,9 @@ class ResultRecyclerAdapter(private val kelimeModel: KelimeModel,private val mCo
         } else {
             holder.itemBinding.recyclerViewAtasozleri.visibility = View.INVISIBLE
         }
-
+        /*holder.itemBinding.imageViewKaydet.setOnClickListener {
+            holder.itemBinding.imageViewKaydet.setBackgroundColor(R.color.redVisne)
+        }*/
         holder.itemBinding.recyclerViewAnlamlar.layoutManager = LinearLayoutManager(mContext)
         holder.itemBinding.recyclerViewAnlamlar.adapter = adapterAnlam
     }

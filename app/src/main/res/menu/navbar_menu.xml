@@ -9,8 +9,4 @@
         android:title="@string/navbar_arama"
         android:icon="@drawable/ic_search"/>
 
-    <item android:id="@+id/savedFragment"
-        android:title="@string/navbar_kaydedilenler"
-        android:icon="@drawable/ic_bookmark"/>
-
 </menu>

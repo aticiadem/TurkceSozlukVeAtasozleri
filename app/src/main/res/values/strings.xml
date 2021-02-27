@@ -1,13 +1,12 @@
 <resources>
     <string name="app_name">Türkçe Sözlük</string>
-    <string name="splashscreen_text">Türkçe Sözlük Ve Atasözleri</string>
     <string name="navbar_gecmis">Geçmiş</string>
     <string name="navbar_arama">Arama</string>
-    <string name="navbar_kaydedilenler">Kaydedilenler</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="history_tumunu_sil">Hepsini Sil</string>
     <string name="ara">Ara</string>
     <string name="aramak_stedi_iniz_kelimeyi_giriniz">Kelime Giriniz</string>
     <string name="hata_tekrar_deneyiniz">Hata, Tekrar Deneyiniz.</string>
+    <string name="splashscreen_text">Türkçe Sözlük, Deyimler \nVe Atasözleri</string>
 </resources>

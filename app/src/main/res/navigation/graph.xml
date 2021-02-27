@@ -23,17 +23,9 @@
         android:label="Arama"
         tools:layout="@layout/fragment_search" >
         <action
-            android:id="@+id/action_searchFragment_to_savedFragment"
-            app:destination="@id/savedFragment" />
-        <action
             android:id="@+id/action_searchFragment_to_resultFragment"
             app:destination="@id/resultFragment" />
     </fragment>
-    <fragment
-        android:id="@+id/savedFragment"
-        android:name="com.adematici.turkcesozlukveatasozleri.ui.fragment.SavedFragment"
-        android:label="Kaydedilenler"
-        tools:layout="@layout/fragment_saved" />
     <fragment
         android:id="@+id/resultFragment"
         android:name="com.adematici.turkcesozlukveatasozleri.ui.fragment.ResultFragment"

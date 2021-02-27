@@ -1,4 +1,4 @@
-package com.adematici.turkcesozlukveatasozleri.adapter
+package com.adematici.turkcesozlukveatasozleri.adapter.result
 
 import android.annotation.SuppressLint
 import android.content.Context

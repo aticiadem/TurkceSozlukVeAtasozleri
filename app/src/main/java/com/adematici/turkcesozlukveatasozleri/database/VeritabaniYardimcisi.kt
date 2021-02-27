@@ -8,12 +8,14 @@ class VeritabaniYardimcisi(context: Context): SQLiteOpenHelper(context,"gecmisAr
 
     override fun onCreate(db: SQLiteDatabase?) {
         db?.execSQL(
-            "CREATE TABLE gecmis(kelime_id INTEGER PRIMARY KEY AUTOINCREMENT, kelime TEXT);"
-        )
+            "CREATE TABLE gecmis(kelime_id INTEGER PRIMARY KEY AUTOINCREMENT, kelime TEXT);")
+        db?.execSQL(
+                "CREATE TABLE kaydedilenler(kelime_id INTEGER PRIMARY KEY AUTOINCREMENT, kelime TEXT);")
     }
 
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
         db?.execSQL("DROP TABLE IF EXISTS gecmis")
+        db?.execSQL("DROP TABLE IF EXISTS kaydedilenler")
         db?.close()
     }
 
