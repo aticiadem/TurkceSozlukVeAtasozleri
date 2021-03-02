@@ -14,7 +14,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:background="@color/gray"
+        android:background="@color/bottombarbackground"
         app:menu="@menu/navbar_menu"/>
 
     <fragment

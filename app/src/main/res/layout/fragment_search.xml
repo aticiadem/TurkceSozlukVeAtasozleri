@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
+    android:background="@color/background"
     tools:context=".ui.fragment.SearchFragment">
 
     <EditText
@@ -16,7 +17,7 @@
         android:background="@drawable/edit_text_ara_background"
         android:singleLine="true"
         android:hint="@string/aramak_stedi_iniz_kelimeyi_giriniz"
-        android:textColor="@color/black"
+        android:textColor="@color/edittexttextcolor"
         android:textSize="20sp"
         android:padding="10dp"/>
 
@@ -26,6 +27,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/ara_button_background"
         android:text="@string/ara"
+        android:textColor="@color/buttontextcolor"
         android:layout_marginTop="30dp"
         android:textSize="24sp" />
 

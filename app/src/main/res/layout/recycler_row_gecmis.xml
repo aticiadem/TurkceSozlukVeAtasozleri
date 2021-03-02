@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:id="@+id/layout"
     android:layout_height="wrap_content"
-    android:background="#D3D3D3">
+    android:background="@color/gecmisbackground">
 
     <ImageView
         android:layout_width="35dp"
@@ -23,7 +23,7 @@
         android:layout_gravity="center"
         android:gravity="center"
         android:text="@string/navbar_arama"
-        android:textColor="@color/black"
+        android:textColor="@color/edittexttextcolor"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -48,6 +48,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:background="@color/black"/>
+        android:background="@color/edittexttextcolor"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
